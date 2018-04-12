@@ -26,6 +26,8 @@ public LoginPages(WebDriver driver){
     super(driver);
     this.driver=driver;
 }
+
+
     public void inUser(ExamplesTable data){
         textUser.type(data.getRow(0).get("user"));
     }
