@@ -8,8 +8,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
 
+
 @DefaultUrl("http://sahitest.com/demo/training/login.htm")
 public class LoginPages extends PageObject {
+
+
 
     @FindBy(xpath = "/html/body/center/div/form/table/tbody/tr[1]/td[2]/input")
     WebElementFacade textUser;
@@ -22,11 +25,13 @@ public class LoginPages extends PageObject {
 
     public WebDriver driver;
 
+	
+	
+	
 public LoginPages(WebDriver driver){
     super(driver);
     this.driver=driver;
 }
-
 
     public void inUser(ExamplesTable data){
         textUser.type(data.getRow(0).get("user"));
@@ -40,4 +45,6 @@ public LoginPages(WebDriver driver){
         btnLogin.click();
     }
 
+	
+	
 }
